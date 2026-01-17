@@ -82,3 +82,15 @@ Potential extensions include:
 ## Disclaimer
 
 Forecasts are model-based estimates derived from historical patterns and do not account for unforeseen geopolitical events, policy changes, or extreme supply disruptions.
+
+## Dashboard Previews
+
+### Price Environment
+![Price Environment Dashboard](assets/price_environment_dashboard.png)
+
+### Forecasting
+![Forecasting Dashboard](assets/forecasting_dashboard.png)
+
+### Arbitrage & Margins
+![Arbitrage Margins Dashboard](assets/arbitrage_margins_dashboard.png)
+
