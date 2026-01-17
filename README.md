@@ -1,18 +1,19 @@
-Machine-learning time-series forecasting pipeline for global natural gas and LNG prices with Power BI integration.
 # Energy Price Forecasting Engine
 
-This project implements a machine-learning time-series forecasting pipeline for global natural gas and LNG prices, integrated into Power BI for downstream analytics and reporting.
+Machine-learning time-series forecasting pipeline for global natural gas and LNG prices with Power BI integration.
 
-It extends prior descriptive analysis of LNG market dynamics into a production-style forecasting system designed for repeatability, scalability, and interpretability.
+This project implements a production-style forecasting system that generates region-specific energy price forecasts and surfaces results in an interactive Power BI dashboard for downstream analysis and reporting.
+
+It extends prior descriptive analysis of LNG market dynamics into a scalable, repeatable, and interpretable forecasting workflow.
 
 ---
 
 ## Project Overview
 
 Energy and LNG markets are highly dynamic, with commercial decisions driven by forward-looking price expectations rather than historical trends alone.  
-This project addresses that need by generating region-specific price forecasts using a Python-based machine-learning pipeline and surfacing results in an interactive Power BI dashboard.
+This project addresses that need by generating region-specific price forecasts using a Python-based machine-learning pipeline and integrating results directly into Power BI.
 
-Forecasts are generated independently for each market based on the latest available data, reflecting real-world differences in reporting cadence and data latency.
+Forecasts are generated independently for each market based on the latest available data, reflecting real-world differences in reporting cadence and data latency across regions.
 
 ---
 
@@ -22,7 +23,8 @@ The forecasting pipeline is built in Python and designed to mirror a lightweight
 
 - Monthly time-series modeling using a Random Forest regressor
 - Feature engineering with lagged values and rolling statistics
-- Per-series model training and 12-month forward forecasting
+- Per-series model training with walk-forward validation
+- 12-month forward forecasting from the last observed actual
 - Automated generation of forecast outputs with model metadata
 - Versioned results written to structured files consumed by Power BI
 
@@ -64,8 +66,8 @@ Forecast outputs are integrated directly into Power BI, where they are combined 
 
 ## Relationship to Prior Work
 
-This project builds on an earlier LNG market analytics dashboard focused on descriptive insights and arbitrage considerations.  
-That project is available here: https://github.com/sammaddux64/US-LNG-Arbitrage-Export-Economics-Analysis
+This project builds on an earlier LNG market analytics dashboard focused on descriptive insights and arbitrage considerations:  
+https://github.com/sammaddux64/US-LNG-Arbitrage-Export-Economics-Analysis
 
 ---
 
@@ -83,6 +85,8 @@ Potential extensions include:
 
 Forecasts are model-based estimates derived from historical patterns and do not account for unforeseen geopolitical events, policy changes, or extreme supply disruptions.
 
+---
+
 ## Dashboard Previews
 
 ### Price Environment
@@ -93,4 +97,3 @@ Forecasts are model-based estimates derived from historical patterns and do not 
 
 ### Arbitrage & Margins
 ![Arbitrage Margins Dashboard](assets/arbitrage_margins_dashboard.png)
-
